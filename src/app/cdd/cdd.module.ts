@@ -1,3 +1,4 @@
+import { AppCompartilhadoModule } from './../app-compartilhado/app-compartilhado.module';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
@@ -13,7 +14,8 @@ import { ClassesComponent } from './classes/classes.component';
   imports: [
     CommonModule,
     CddRoutingModule,
-    AppMaterialModule
+    AppMaterialModule,
+    AppCompartilhadoModule
   ]
 })
 export class CddModule { }

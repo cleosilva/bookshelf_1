@@ -5,3 +5,15 @@ table {
 .example-spacer {
   flex: 1 1 auto;
 }
+
+.loading-spiner {
+  background-color: rgb(221, 221, 221);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem;
+}
+
+.iconeCdd{
+  margin: 0.5rem;
+}

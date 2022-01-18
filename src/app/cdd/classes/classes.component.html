@@ -1,5 +1,6 @@
 
 <mat-card>
+  <div *ngIf="livrosGeneros$ | async as livrosGeneros; else loading;">
   <mat-toolbar color="accent">
     <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
       <mat-icon>menu</mat-icon>
@@ -15,10 +16,17 @@
   </mat-toolbar>
 
   <table mat-table [dataSource]="livrosGeneros" class="mat-elevation-z8">
-    <!-- ID do Gênero -->
+
+    <!-- Icone do Gênero -->
     <ng-container matColumnDef="_idGenero">
-      <th mat-header-cell *matHeaderCellDef>Código CDD</th>
-      <td mat-cell *matCellDef="let generos">{{ generos._idGenero }}</td>
+      <th mat-header-cell *matHeaderCellDef>Ícone CDD</th>
+      <td mat-cell *matCellDef="let generos">
+      <div class="example-button-container">
+        <button class="iconeCdd" mat-fab color="accent" aria-label="Example icon button with a bookmark icon">
+          <mat-icon>{{ generos._idGenero | pipes}}</mat-icon>
+        </button>
+      </div>
+      </td>
     </ng-container>
 
     <!-- Nome do Gênero -->
@@ -36,4 +44,10 @@
     <tr mat-header-row *matHeaderRowDef="visaoColunas"></tr>
     <tr mat-row *matRowDef="let row; columns: visaoColunas"></tr>
   </table>
+</div>
+<ng-template #loading>
+  <div class="loading-spiner">
+    <mat-spinner></mat-spinner>
+  </div>
+</ng-template>
 </mat-card>
