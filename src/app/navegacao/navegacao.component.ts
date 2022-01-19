@@ -14,9 +14,6 @@ export class NavegacaoComponent {
 
   // itens do menu principal
   tituloNav = 'BookShelf v1';
-  usuario = {username: 'Victor', userIcon:'remember_me'}
-  // itens da Barra superior
-  tituloBarra = '[Sua estante virtual]';
   // itens de ícones
   iconeGeral = '../../assets/img/ShelfBook.png';
   lIcone = 80;

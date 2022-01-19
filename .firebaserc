@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "bookshelf-b11f3": {
+      "hosting": {
+        "bookshelf_1": [
+          "bookshelf-b11f3"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "bookshelf-b11f3"
+  }
+}
